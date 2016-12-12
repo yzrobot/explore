@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+  <name>explore</name>
+  <version>0.0.0</version>
+  <description>Frontier based exploration.</description>
+  <author>Charles DuHadway</author>
+  <maintainer email="zhi.yan@mines-douai.fr">Zhi Yan (Indigo)</maintainer>
+  <maintainer email="pitzer@google.com">Benjamin Pitzer (Groovy)</maintainer>
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>costmap_2d</build_depend>
+  <build_depend>tf2_bullet</build_depend>
+  <build_depend>navfn</build_depend>
+  <build_depend>move_base_msgs</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>costmap_2d</run_depend>
+  <run_depend>tf2_bullet</run_depend>
+  <run_depend>navfn</run_depend>
+  <run_depend>move_base_msgs</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>tf</run_depend>
+</package>
