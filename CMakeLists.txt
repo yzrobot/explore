@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(explore)
 
-find_package(catkin REQUIRED COMPONENTS roscpp navfn)
+find_package(catkin REQUIRED COMPONENTS roscpp costmap_2d navfn)
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
