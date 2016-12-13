@@ -76,7 +76,7 @@ Explore::Explore() :
   double loop_closure_loop_dist_min;
   double loop_closure_loop_dist_max;
   double loop_closure_slam_entropy_max;
-  private_nh.param("close_loops", close_loops_, false); // TODO: switch default to true once gmapping 1.1 has been released
+  private_nh.param("close_loops", close_loops_, true);
   private_nh.param("loop_closure_addition_dist_min", loop_closure_addition_dist_min, 2.5);
   private_nh.param("loop_closure_loop_dist_min", loop_closure_loop_dist_min, 6.0);
   private_nh.param("loop_closure_loop_dist_max", loop_closure_loop_dist_max, 20.0);
@@ -86,7 +86,6 @@ Explore::Explore() :
   private_nh.param("gain_scale", gain_scale_, 1.0);
 
   explore_costmap_ros_ = new Costmap2DROS(std::string("explore_costmap"), tf_);
-  //explore_costmap_ros_->clearRobotFootprint();
 
   planner_ = new navfn::NavfnROS(std::string("explore_planner"), explore_costmap_ros_);
   explorer_ = new ExploreFrontier();
@@ -204,7 +203,6 @@ void Explore::makePlan() {
   explore_costmap_ros_->getRobotPose(robot_pose);
 
   std::vector<geometry_msgs::Pose> goals;
-  //explore_costmap_ros_->clearRobotFootprint();
   explorer_->getExplorationGoals(*explore_costmap_ros_, robot_pose, planner_, goals, potential_scale_, orientation_scale_, gain_scale_);
   if (goals.size() == 0)
     done_exploring_ = true;
