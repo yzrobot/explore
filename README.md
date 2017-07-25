@@ -1,3 +1,3 @@
-# Willow Garage's explore package for ROS Indigo #
+# explore #
 
 [http://wiki.ros.org/explore](http://wiki.ros.org/explore)
